@@ -1,4 +1,5 @@
 // TodoList.tsx
+import { letsDoIt } from 'lib/Interface';
 import React, { useState } from 'react';
 import useStore from 'store/store-zustand';
 
@@ -27,6 +28,7 @@ const TodoList: React.FC = () => {
           </li>
         ))}
       </ul>
+      <button onClick={() => letsDoIt()}> lets do it</button>
     </div>
   );
 };

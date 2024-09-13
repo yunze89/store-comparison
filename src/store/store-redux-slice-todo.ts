@@ -1,5 +1,5 @@
 // store.ts
-import { createSlice, configureStore, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface Todo {
   id: number;
@@ -7,7 +7,8 @@ interface Todo {
   completed: boolean;
 }
 
-const todoSlice = createSlice({
+//createSlice를 통해서 reducer, action이 동시에 생성된다.
+export const todoSlice = createSlice({
   name: 'todos',
   initialState: [] as Todo[],
   reducers: {
@@ -33,14 +34,3 @@ const todoSlice = createSlice({
 });
 
 export const { addTodo, deleteTodo, updateTodo, toggleTodo } = todoSlice.actions;
-
-const store = configureStore({
-  reducer: {
-    todos: todoSlice.reducer
-  }
-});
-
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
-
-export default store;

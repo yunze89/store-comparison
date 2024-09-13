@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState, addTodo, deleteTodo, updateTodo, toggleTodo } from 'store/store-redux';
+import { RootState } from 'store/store-redux-index';
+import { addTodo, deleteTodo, updateTodo, toggleTodo } from 'store/store-redux-slice-todo';
 
 const TodoList: React.FC = () => {
   const todos = useSelector((state: RootState) => state.todos);

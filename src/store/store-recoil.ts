@@ -26,3 +26,9 @@ export const todoListStatsState = selector({
     };
   },
 });
+
+//리랜더링 테스트
+export const userNameState = atom<string>({
+  key: 'userNameState',
+  default: '',
+});
