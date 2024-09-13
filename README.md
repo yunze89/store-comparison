@@ -1,3 +1,5 @@
+redux, recoil, zustand를 실제 비교해보고 테스트하기 위한 프로젝트
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
